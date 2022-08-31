@@ -23,27 +23,22 @@ const empty = document.querySelector(".empty");
     }
   });
       
-   function addDeleteBtn() {
-   		const deleteBtn = document.createElement("button");
+  function addDeleteBtn() {
+  	const deleteBtn = document.createElement("button");
       
-      deleteBtn.textContent = "x";
-      deleteBtn.className = "btn-delete";
+    deleteBtn.textContent = "x";
+    deleteBtn.className = "btn-delete";
       
-      deleteBtn.addEventListener("click", (e) => {
-          const item = e.target.parentElement;
-          ul.removeChild(item);
+    deleteBtn.addEventListener("click", (e) => {
+      
+      const item = e.target.parentElement;
+      ul.removeChild(item);          
+      const items = document.querySelectorAll("li");          
           
-          const items = document.querySelectorAll("li");
-          
-          
-          if (items.length == 0) {
-          	empty.style.display = "block";
-          }
-          
-          });
-          return deleteBtn;
-   }
-   
-   
- 
-  
+      if (items.length == 0) {
+      	empty.style.display = "block";
+      }          
+    });
+
+    return deleteBtn;
+  }
