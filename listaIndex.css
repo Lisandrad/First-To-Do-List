@@ -1,0 +1,76 @@
+body {
+    background-color: #4F846A;
+    color: white;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #4F846A;
+  }
+  
+  .container {
+    margin-top: 30px;
+    width: 30%;
+    background-color: white;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  form {
+    display: flex;
+  }
+  
+  input {
+    padding: 15px 10px;
+    width: 350px;
+    display: flex;
+  }
+  
+  .btn-add {
+    padding: 15px;
+    color: white;
+    background-color: #4F846A;
+    border-color: gray;
+    display: flex;
+  }
+  
+  .btn-add:hover {
+    cursor: pointer;
+    background-color: #158603;
+  
+  }
+  
+  
+  .btn-delete {
+    margin-left: auto;
+    border: none;
+    background-color: #7C1725;
+    color: white;
+    padding: 5px 10px;
+    outline: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+  }
+  
+  .btn-delete:hover {
+    cursor: pointer;
+    background-color: lightseagreen;
+  }
+  
+  
+  li {
+    color: #4F846A;
+    list-style: none;
+    background-color: #BEC3C1;
+    border-radius: 10px;
+    margin-top: 15px;
+    display: flex;
+  }
+  
+  .empty {
+    color: #4F846A;
+    text-align: center;
+  }
+  
