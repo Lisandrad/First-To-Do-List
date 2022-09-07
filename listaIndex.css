@@ -6,6 +6,12 @@ body {
   h1 {
     text-align: center;
     color: #4F846A;
+    padding-left: 50px;
+  }
+
+  p {
+    padding-left: 50px;
+    padding-right: 25px;
   }
   
   .container {
@@ -13,6 +19,7 @@ body {
     width: 30%;
     background-color: white;
     padding: 30px;
+    padding-right: 100px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -25,6 +32,7 @@ body {
     padding: 15px 10px;
     width: 350px;
     display: flex;
+    margin-left: 100px;
   }
   
   .btn-add {
@@ -41,6 +49,9 @@ body {
   
   }
   
+  .taskCompleted p {
+    text-decoration: line-through;
+  }
   
   .btn-delete {
     margin-left: auto;
@@ -52,22 +63,44 @@ body {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     
+    
   }
   
   .btn-delete:hover {
     cursor: pointer;
     background-color: lightseagreen;
   }
+
+  .btn-checkbox {
+    margin-left: 5px;
+    color: red;
+    width: 16px;
+    height: 45px;
+    max-width: 16px;
+    min-width: 16px;
+    max-height: 45px;
+    min-height: 45px;
+  }
   
+  .stlcheckbox{
+    color: yellow;
+  }
+
   
   li {
     color: #4F846A;
     list-style: none;
     background-color: #BEC3C1;
     border-radius: 10px;
-    margin-top: 15px;
+    margin-top: 18px;
+    margin-left: 59px;
+    margin-right: 2px;
+    min-width: 200px;
+    max-width: 410px;
     display: flex;
+    word-break: break-all;
   }
+
   
   .empty {
     color: #4F846A;

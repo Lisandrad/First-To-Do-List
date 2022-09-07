@@ -10,12 +10,15 @@ const empty = document.querySelector(".empty");
     const text = input.value;
           
     if (text !== "")  {
-      const li = document.createElement("li");
+      const li = document.createElement("li");      
+      let botonDlt = createDeleteBtn();
+      let check = createCheckbox();
       const p = document.createElement("p");
       p.textContent = text;
 
+      li.appendChild(check);
       li.appendChild(p);
-      li.appendChild(addDeleteBtn());
+      li.appendChild(botonDlt);
       ul.appendChild(li);
 
       input.value = "";
@@ -23,15 +26,15 @@ const empty = document.querySelector(".empty");
     }
   });
       
-  function addDeleteBtn() {
+  function createDeleteBtn() {
   	const deleteBtn = document.createElement("button");
       
     deleteBtn.textContent = "x";
     deleteBtn.className = "btn-delete";
       
-    deleteBtn.addEventListener("click", (e) => {
+    deleteBtn.addEventListener("click", (event) => {
       
-      const item = e.target.parentElement;
+      const item = event.target.parentElement;
       ul.removeChild(item);          
       const items = document.querySelectorAll("li");          
           
@@ -41,4 +44,22 @@ const empty = document.querySelector(".empty");
     });
 
     return deleteBtn;
+  }
+
+  function createCheckbox () {
+    const checkboxBtn = document.createElement("input");
+    
+    checkboxBtn.className = "btn-checkbox";
+    checkboxBtn.type = "checkbox";
+    
+
+    checkboxBtn.addEventListener("click", (event) => {
+        
+      //cree un avariable y asignar como valor su elemento padre.
+        const checkboxfather = event.target.parentElement;
+        checkboxfather.classList.add("taskCompleted");
+             
+    });
+
+    return checkboxBtn;
   }
